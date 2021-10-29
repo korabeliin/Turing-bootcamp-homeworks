@@ -1,0 +1,282 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 100px;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  text-align: center;
+  margin: 35px 0;
+}
+
+.anim-block {
+  width: 250px;
+  height: 200px;
+  border-radius: 1em;
+  background-color: #e63946;
+  margin: 25px auto;
+  transition: background-color 1s;
+  cursor: pointer;
+  color: aliceblue;
+  padding: .7em 1em;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.anim-block p {
+  margin: 0;
+  transition: color 1s;
+  transition-delay: 1s;
+}
+
+.anim-block:hover {
+  background-color: #1d3557;
+  color: #e63946;
+}
+
+.growing-block {
+  width: 100px;
+  height: 100px;
+  background-color: #001219;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 3s;
+}
+
+.growing-block:hover {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sticky-block {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  margin: 0 auto;
+  background-color: #e9c46a;
+  position: sticky;
+  top: 50px;
+  z-index: 2;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 10px;
+  background-color:white;
+  width: 200px;
+  margin: 35px auto;
+  z-index: 2;
+}
+
+section {
+  margin: 0 auto;
+  width: 30vw;
+}
+
+section p {
+  font-size: 1.3rem;
+}
+
+.monster-input {
+  margin: 0 20px;
+  border-radius: 15px;
+  transition: 3s;
+}
+
+.monster-input:focus {
+  transform: scale(2, 1.5) translateX(200%);
+  margin: 0;
+}
+
+.loading {
+  margin: 40px 0;
+}
+
+#progress-bar-container {
+	width: 800px;
+	height: 60px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	/* transform: translateY(-50%); */
+	border-radius: 35px;
+	overflow: hidden;
+}
+
+.progress-bar-child {
+	width: 100%;
+	height: 100%;
+}
+
+.progress {
+	background: linear-gradient(to right, #437609 0%, #75DE0E 45%, #ccff33 100%);
+}
+
+.shrinker {
+	background-color: #293034;
+  box-shadow: inset 3px 3px 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+}
+
+.timelapse {
+	animation-name: timelapse;
+	animation-fill-mode: forwards;
+	animation-duration: 3s;
+	animation-timing-function: cubic-bezier(.86, .05, .4, .96);
+  animation-iteration-count: 3;
+}
+
+@keyframes timelapse {
+	0% {
+		width: 100%;
+	}
+	50% {
+		width: 0%;
+	}
+  100% {
+		width: 100%;
+	}
+}
+
+.container {
+  margin: 75px auto;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  animation: rotating 3.5s linear infinite;
+}
+
+.crazy-plane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(370deg);
+  }
+}
+
+.stretch-block {
+  width: 150px;
+  height: 150px;
+  background-color: cadetblue;
+  animation-name: stretching;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+div .check {
+  height: 25px;
+  width: 25px;
+  margin: 0 25px;
+}
+
+div .check:checked + div {
+  animation-play-state: running;
+}
+
+@keyframes stretching {
+  0% {
+    width: 150px;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+
+.square {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: #b5838d;
+  margin: 100px auto;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  top: -60px;
+  left: 0;
+  position: absolute;
+  background-color: #6d6875;
+  border-radius: 50%;
+  animation: moving 5s;
+}
+
+
+@keyframes moving {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(250px, 0);
+  }
+  50% {
+    transform: translate(250px, 310px);
+  }
+  75% {
+    transform: translate(-60px, 310px);
+  }
+  100% {
+    transform: translate(-60px, 0);
+  }
+}
+
+
+.lds-ring {
+  display: block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #000;
+  border-radius: 50%;
+  animation: lds-ring /*1.2s*/0.6s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: calc(-0.45s / 2);
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: calc(-0.3s / 2);
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: calc(-0.15s / 2);
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
