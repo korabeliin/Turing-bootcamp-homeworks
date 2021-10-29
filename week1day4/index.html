@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML/CSS</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <h1 class="header">HTML</h1>
+  
+  <p class="green"><span class="bold">HTML</span> (от англ. <span class="italic">HyperText Markup Language</span> — «язык гипертекстовой разметки») —
+    стандартизированный язык разметки документов для просмотра веб-страниц во Всемирной паутине. 
+    од HTML интерпретируется браузерами; полученная в результате интерпретации страница 
+    отображается на экране монитора компьютера или мобильного устройства.
+  </p>
+  
+  <p>
+    Язык HTML до 5-й версии определялся как приложение SGML (стандартного языка разметки по стандарту ISO 8879).
+    Спецификации HTML5 формулируются в терминах DOM (объектной модели документа).</p>
+  
+  <p>Строгим вариантом HTML является XHTML, он следует синтаксис XML и является приложением языка XML в области
+    разметки гипертекста.</p>
+  
+  <p>HTML-страницы, как правило, открываются браузерами обмениваясь с сервером информацией по протоколу HTTP или
+    HTTPS, в виде простого текста или с использованием шифрования.
+  </p>
+  
+  <hr>
+  
+  <h3 class="header">Общее представление</h3>
+  <p>Изначально язык HTML был задуман и создан как средство структурирования и форматирования документов без их привязки к
+    средствам воспроизведения (отображения). В идеале, текст с разметкой HTML должен был без стилистических и структурных
+    искажений воспроизводиться на оборудовании с различной технической оснащённостью (цветной экран современного
+    компьютера,
+    монохромный экран органайзера, ограниченный по размерам экран мобильного телефона или устройства и программы
+    голосового
+    воспроизведения текстов). Однако современное применение HTML очень далеко от его изначальной задачи. Например, тег
+  </p>
+  
+  <p>предназначен для создания в документах таблиц, но иногда используется и для оформления размещения элементов на
+    странице. С течением времени основная идея платформонезависимости языка HTML была принесена в жертву современным
+    потребностям в мультимедийном и графическом оформлении.</p>
+
+  <section class="block_el">
+    <div></div>
+  </section> 
+
+  <fieldset>
+    <legend>Checkbox</legend>
+    <input type="checkbox">
+    <input type="checkbox" disabled>
+  </fieldset>
+  <fieldset>
+    <legend>File</legend>
+    <input type="file">
+    <input type="file" disabled>
+  </fieldset>
+  <fieldset>
+    <legend>Image</legend>
+    <input type="image">
+    <input type="image" disabled>
+  </fieldset>
+  <fieldset>
+    <legend>Password</legend>
+    <input type="password">
+    <input type="password" disabled>
+  </fieldset>
+  <fieldset>
+    <legend>Text</legend>
+    <input type="text">
+    <input type="text" disabled>
+  </fieldset>
+  <fieldset>
+    <legend>Email</legend>
+    <input type="email">
+    <input type="email" disabled>
+  </fieldset>
+  <fieldset>
+    <legend>Date</legend>
+    <input type="date">
+    <input type="date" disabled>
+  </fieldset>
+
+  <button type="button">Button button</button>
+
+  <input type="button" value="Input button">
+
+<br> <br>
+
+  <div>Choose one option:</div>
+  <div>
+    <input type="radio" id="cats" name="animals" value="cats">
+    <label for="cats">Cats</label>
+  </div>
+  
+  <div>
+    <input type="radio" id="dogs" name="animals" value="dogs">
+    <label for="dogs">Dogs</label>
+  </div>
+  
+  <div>
+    <input type="radio" id="fish" name="animals" value="fish">
+    <label for="fish">Fish</label>
+  </div>
+
+  <section>
+    <label for="text">Textarea</label>
+    <textarea class="noresize" name="text" id="text" cols="30" rows="3" maxlength="100"></textarea>
+  </section>
+
+  <section>
+    <label for="text">Textarea</label>
+    <textarea name="text" id="text" cols="50" rows="6" placeholder="Type something here"></textarea>
+  </section>
+
+  <label for="lorem">Список:</label>
+  <select name="lorem" id="lorem">
+    <option>Lorem, ipsum.</option>
+    <option>Lorem, ipsum dolor.</option>
+    <option>Lorem</option>
+    <option selected>Lorem ipsum dolor sit amet.</option>
+    <option>Lorem ipsum dolor sit.</option>
+    <option>Lorem</option>
+  </select>
+
+  <label for="lorem2">Меню:</label>
+  <select name="lorem2" id="lorem2" multiple>
+    <option>Lorem, ipsum.</option>
+    <option>Lorem, ipsum dolor.</option>
+    <option>Lorem</option>
+    <option>Lorem ipsum dolor sit amet.</option>
+    <option>Lorem ipsum dolor sit.</option>
+    <option>Lorem</option>
+  </select>
+
+<div>
+  <label for="text2">Lorem, ipsum dolor.</label>
+  <input type="text2" id="text2" name="text2">
+</div>
+
+<fieldset>
+  <legend>FORM</legend>
+  <input type="email" placeholder="email" tabindex="3">
+  <input type="password" placeholder="password" tabindex="2">
+  <input type="submit" value="Submit" tabindex="1">
+</fieldset>
+
+</body>
+</html>
