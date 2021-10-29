@@ -1,0 +1,297 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  padding-bottom: 100px;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid black;
+  display: inline-block;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #f00;
+  display: inline-block;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid rgb(197, 14, 173);
+  display: inline-block;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right:30px solid rgb(247, 192, 11); 
+  display: inline-block;
+}
+
+.pseudo-par, .second-pseudo-par, .selection, .sec-pseudo-par {
+  width: 45vw;
+}
+
+.pseudo-par p::first-letter {
+  color: blue;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.second-pseudo-par p::first-line  {
+  font-style: italic;
+  text-decoration: overline;
+}
+
+.selection .select-first::selection {
+  background-color: #3390FF;
+  color: aliceblue;
+}
+
+.selection .select-second::selection {
+  background-color: #d62828;
+  color: aliceblue;
+}
+
+.special-input {
+  padding: 0;
+}
+
+.special-input::placeholder {
+  color: #219ebc;
+  background-color: #e5e5e5;
+}
+
+.diff-input {
+  width: 20vw;
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.6);
+  border: none;
+}
+
+.diff-input::placeholder {
+  color: #d4a373;
+}
+
+.diff-input:focus::placeholder {
+  color:aqua;
+}
+
+.sec-pseudo-par p::before {
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent; 
+  border-bottom:15px solid rgb(247, 192, 11); 
+  display: inline-block;
+}
+
+.pseudo-again .first::before {
+  content: 'Абзац {1}:';
+}
+
+.pseudo-again .sec::before {
+  content: 'Абзац {2}:';
+}
+
+.list li, .sec-list li {
+  font-size: 1.3rem;
+}
+
+.list li:nth-child(4){
+  color: #1A07FF;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sec-list li:nth-child(odd) {
+  color: #1A07FF;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+input[type="checkbox"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  background: white;
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  opacity: 0.5;
+  border-radius: 5px;
+  border: 1px solid #d1caca;
+}
+
+input[type="checkbox"]:checked {
+  background: #f00;
+  opacity: 1;
+}
+
+input[type="checkbox"]:hover {
+  filter: brightness(90%);
+}
+
+input[type="checkbox"]:disabled {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+input[type="checkbox"]:after {
+  content: '';
+  position: relative;
+  left: 38%;
+  top: 17%;
+  width: 15%;
+  height: 40%;
+  border: solid #fff;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+
+input[type="checkbox"]:checked:after {
+  display: block;
+}
+
+input[type="checkbox"]:disabled:after {
+  border-color: #d1caca;
+}
+
+
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0 25px 0 7px;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 1px solid #d1caca;
+  opacity: 0.7;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #f00;
+  opacity: 1;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+.container .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.lorem p:not(.test) {
+  color: red;
+}
+
+.unordered-list {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.unordered-list li {
+  color: #f00;
+}
+
+.unordered-list li:first-child {
+  color: #000;
+}
+
+.scroller, .third-scroller, .sec-scroller {
+  display: inline-block;
+  width: 400px;
+  height: 200px;
+  overflow-y: scroll;
+  margin: 0 35px;
+}
+
+.scroller::-webkit-scrollbar {
+  background-color: red;
+  width: 7px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 2px solid #ccc;
+}
+
+.third-scroller::-webkit-scrollbar {
+  width: 7px;
+  background: linear-gradient(#001219, red);   
+
+}
+
+.sec-scroller::-webkit-scrollbar {
+  width: 7px;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.third-scroller::-webkit-scrollbar-thumb {
+  background: rgb(121, 120, 120);
+  border: 2px solid #ccc;
+}
+
+.sec-scroller::-webkit-scrollbar-thumb {
+  background: rgb(175, 169, 169);
+  border: 2px solid #ccc;
+}
