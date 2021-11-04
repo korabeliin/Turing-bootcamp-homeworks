@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  padding-bottom: 100px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-width:100%;
+  background-color: #f72585;
+}
+
+.blue-square {
+  height: 300px;
+  width: 300px;
+  background-color: #023e8a;
+}
+
+.sec-container, .third-container {
+  height: 500px;
+  width: 75%;
+  display: flex;
+  border: 3px solid #ee9b00;
+  margin: 25px auto;
+}
+
+.sec-container div, .third-container div {
+  width: 200px;
+  height: 200px;
+  background-color: #ee9b00;
+  color: aliceblue;
+  border: 2px solid #f72585;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.third-container div {
+  flex-grow: 2;
+}
+
+.third-container .shrink {
+  flex-grow: 1;
+}
+h2  {
+  text-align: center;
+  margin: 50px 0 25px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gal-container {
+  padding: 22px 30px;
+  width: 250px;
+  height: 200px;
+  background-color: #c4c4c4;
+  box-sizing: border-box;
+  margin: 40px;
+}
+
+.gal-container img {
+  width: 190px;
+  height: 120px;
+}
+
+.gal-container p, .gal-container button {
+  font-size: 8px;
+}
+
+.gal-container p {
+  width: 140px;
+  height: 12px;
+  margin-bottom: 0;
+  background-color: #DDD;
+  padding: 3px 12px;
+  box-sizing: border-box;
+}
+
+.gal-container button {
+  width: 190px;
+  height: 14px;
+  text-align: left;
+  background-color: #BB0000;
+  border: none;
+}
+
+.mod-container {
+  width: 1240px;
+  height: 1024px;  
+  background-color: #e5e5e5;
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mod-content {
+  width: 723px;
+  height: 445px;
+  background-color: #C4C4C4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center ;
+  flex-direction: column;
+}
+
+.mod-content header {
+  background-color: #ddd;
+  padding: 6px 90px;
+  margin: 35px 0;
+  font-size: 30px;
+}
+
+.mod-content p {
+  width: 590px;
+  height: 175px;
+  background-color: #ddd;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.mod-content button {
+  width: 340px;
+  height: 50px;
+  background-color: #BB0000;
+  border: none;
+  font-size: 30px;
+  text-align: left;
+  padding: 0 40px;
+  margin: 25px 0;
+}
+
+.nav-container {
+  background-color: #eeecec;
+  padding: 35px;
+  margin: 25px auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+.nav-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container ul li a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8d8b8b;
+}
+
+.nav-container ul li {
+  flex-grow: 1;
+}
+
+.nav-container li a:not(.button):hover {
+  text-decoration: underline;
+}
+
+.nav-container ul .logo a:hover {
+  text-decoration: none;
+}
+
+.nav-container ul .logo {
+  flex-grow: 10;
+}
+
+.nav-container ul .logo a {
+  color: #2B7DE9;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.nav-container .button {
+  background-color: #2B7DE9;
+  border: none;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 0.3em;
+  text-decoration: none;
+}
+
+
+
+
+
+.adapt-container {
+  margin: 0 auto;
+  height: 600px;
+  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 3px solid #000;
+}
+
+.adapt-container .row div {
+  width: 25%;
+  background-color: #BB0000;
+  border: 3px solid #000;
+  box-sizing: border-box;
+}
+
+.adapt-container .row div:first-child {
+  flex-grow: 2;
+}
+
+.adapt-container .row div:nth-of-type(3) {
+  flex-grow: 1;
+}
+
+.adapt-container .row {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.adapt-container .col {
+  height: 60%;
+  flex-direction: column;
+  display: flex;
+  background-color: #023e8a;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.adapt-container .col div {
+  width: 100%;
+  height: 50%;
+  flex-grow: 1;
+  box-sizing: border-box;
+  background-color: #BB0000;
+  border: 3px solid #000;
+}
+
+.sec-col {
+  flex: 0 0 300px;
+  background-color: #BB0000;
+  border: 3px solid #000;
+  box-sizing: border-box;
+  height: 60%;
+}
