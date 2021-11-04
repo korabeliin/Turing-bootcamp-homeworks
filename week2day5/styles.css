@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:"header nav nav nav"
+                      "section section section section"
+                      "main main img extra"
+                      "banner banner banner banner";
+  grid-template-columns: 300px 1fr 1fr 1fr;
+  grid-template-rows: 65px 1.5fr 1fr 100px;
+  min-height: 100vh;                    
+}
+
+.grid header, .grid nav, .grid section, .grid main {
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img, .extra, .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid header {
+  background-color: #14213d;
+  grid-area: header;
+}
+
+.grid nav {
+  background-color: #e63946;
+  grid-area: nav;
+}
+
+.grid section {
+  background-color: #0077b6;
+  grid-area: section;
+}
+
+.grid main {
+  background-color: #023e8a;
+  grid-area: main;
+}
+
+.img {
+  background-color: #cdb4db;
+  grid-area: img;
+  align-self: start;
+  grid-column: 4/4;
+  height: 50%;
+}
+
+.extra {
+  background-color: #007f5f;
+  grid-area: extra;
+  align-self: end;
+  height: 50%;
+}
+
+.banner {
+  background-color: #ffb703;
+  grid-area: banner;
+}
+
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-areas:"header header header header"
+                        "section section section section"
+                        "nav main main main"
+                        "nav banner banner banner"
+                        "nav extra extra img";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .extra, .img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 425px) {
+  .grid {
+    grid-template-areas:"header"
+                        "nav"
+                        "section"
+                        "main"
+                        "banner"
+                        "extra"
+                        "img";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 50px) 1.3fr 1fr repeat(3, 80px);
+  }
+  .extra, .img, .banner {
+    grid-column: unset;
+    height: 100%;
+  }
+}

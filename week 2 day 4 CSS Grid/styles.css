@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  padding-bottom: 100px;
+}
+
+h2  {
+  text-align: center;
+  margin: 50px 0 25px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.gal-container {
+  padding: 22px 30px;
+  width: 250px;
+  height: 200px;
+  background-color: #c4c4c4;
+  box-sizing: border-box;
+  margin: 25px;
+}
+
+.gal-container img {
+  width: 190px;
+  height: 120px;
+}
+
+.gal-container p, .gal-container button {
+  font-size: 8px;
+}
+
+.gal-container p {
+  width: 150px;
+  height: 12px;
+  margin-bottom: 0;
+  background-color: #DDD;
+  padding: 3px 10px;
+  box-sizing: border-box;
+}
+
+.gal-container button {
+  width: 190px;
+  height: 14px;
+  text-align: left;
+  background-color: #BB0000;
+  border: none;
+}
+
+
+/* MENU */
+
+.nav-container {
+  background-color: #eeecec;
+  padding: 35px;
+  margin: 25px auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+.nav-container ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 70px) repeat(2, 90px) 125px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container ul li a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8d8b8b;
+}
+
+.nav-container li a:not(.button):hover {
+  text-decoration: underline;
+}
+
+.nav-container ul .logo a:hover {
+  text-decoration: none;
+}
+
+.nav-container ul .logo a {
+  color: #2B7DE9;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.nav-container .button {
+  background-color: #2B7DE9;
+  border: none;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 0.3em;
+  text-decoration: none;
+}
+
+
+
+
+.adapt-container {
+  margin: 0 auto;
+  height: 600px;
+  width: 55%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  border: 3px solid #000;
+}
+
+.adapt-container  div {
+  background-color: #f4a261;
+}
+
+.adapt-container .wide {
+  grid-column: 1/3;
+}
+
+.adapt-container .tall {
+  grid-row: 2/4;
+  grid-column: 3/4;
+}
