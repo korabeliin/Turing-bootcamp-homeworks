@@ -1,0 +1,103 @@
+body {
+  margin: 50px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sweet {
+  width: 200px;
+  height: 200px;
+  background-color: cadetblue;
+  margin: 50px auto;
+}
+
+.change {
+  height: 100px;
+  width: 100px;
+  background-color: antiquewhite;
+}
+
+.parent-element {
+  background-color: bisque;
+  padding: 25px;
+}
+
+.parent-element p {
+  background-color:burlywood;
+  padding: 10px;
+  font-size: 19px;
+}
+
+.parent-div {
+  padding: 20px;
+  margin: 20px;
+}
+
+.click-btn {
+  margin: 25px auto;
+  padding: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.scroll-num {
+  width: 300px;
+  margin: 25px auto;
+  padding: 15px;
+  position: sticky;
+  top: 25px;
+  text-align: center;
+  font-size: 25px;
+  background-color: antiquewhite;
+  z-index: 2;
+}
+
+table {
+  margin: 25px auto;
+  width: 500px;
+}
+table tr {
+  text-align: center;
+}
+
+table td {
+  border: 2px solid cadetblue;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: red;
+}
+
+form {
+  margin: 25px auto;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.focused {
+  width: 100%;
+  border: 2px solid cadetblue;
+}
+
+.delete-btn {
+  padding: 15px;
+  margin: 50px auto;
+  display: block;
+  cursor: pointer;
+}
+
+ul {
+  margin: 50px auto;
+  width: 200px;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  border: 2px solid cadetblue;
+  padding: 15px;
+}
