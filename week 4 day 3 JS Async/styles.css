@@ -1,0 +1,51 @@
+body {
+  margin: 25px 0;
+  background-color:cornflowerblue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2, h3 {
+  margin: 0;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 25px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.clocks, .seconds-remained, .timer {
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 25px;
+}
+
+.timer input {
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  border: none;
+  color: purple;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.timer button {
+  cursor: pointer;
+  border: none;
+  background-color:darkslateblue;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.timer input:focus-visible {
+  outline: none;
+}

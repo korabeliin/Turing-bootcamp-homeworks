@@ -1,0 +1,53 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cadetblue;
+}
+
+.track {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: no-repeat center/300px url(./images/track.png);
+  animation: moveTrack 5s infinite alternate;
+}
+
+.first-wheel, .sec-wheel {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  bottom: 45px;
+  background: no-repeat center/50px url(./images/wheel.png);
+  animation: wheelsRotation 5s infinite alternate;
+}
+
+.first-wheel {
+  left: 33px;
+}
+
+.sec-wheel {
+  right: 40px;
+}
+
+@keyframes wheelsRotation {
+  from {
+    transform: rotate(0deg);
+  } 
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveTrack {
+  from {
+    transform: translate(-100px);
+  } 
+  to {
+    transform: translate(150px);
+  }
+}
+
