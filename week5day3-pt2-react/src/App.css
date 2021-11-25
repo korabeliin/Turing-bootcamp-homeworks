@@ -1,0 +1,24 @@
+.components-container {
+  margin: 25px;
+  margin-bottom: 100px;
+}
+
+.textarea-container, .symbols-sum-container, .form-container, .auth-container, .select-container {
+  margin: 0 auto;
+  width: 350px;
+}
+
+button, input {
+  margin: 10px;
+}
+
+.auth-container span {
+  color: red;
+  font-weight: bold;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+}
