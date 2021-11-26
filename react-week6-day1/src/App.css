@@ -1,0 +1,31 @@
+.components-container {
+  margin: 25px;
+}
+
+.focused-input-container {
+  width: 350px;
+  margin: 0 auto;
+}
+
+input {
+  margin: 25px;
+}
+
+.posts-container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.first-post {
+  border: 2px solid cadetblue;
+  margin-bottom: 20px;
+}
+
+.second-post {
+  border: 2px solid cadetblue;
+  margin-bottom: 20px;
+}
+
+.third-post {
+  border: 2px solid cadetblue;
+}
