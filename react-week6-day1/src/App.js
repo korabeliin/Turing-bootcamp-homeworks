@@ -1,5 +1,5 @@
 import './App.css';
-import InputFunc, {Posts} from "./Components";
+import InputFunc, { Posts, ScrollBlock } from "./Components";
 
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <div className="components-container">
       <InputFunc />
       <Posts />
+      <ScrollBlock />
     </div>
   );
 }

@@ -11,21 +11,22 @@ input {
   margin: 25px;
 }
 
-.posts-container {
+.posts-container, .scroll-container {
   width: 400px;
   margin: 0 auto;
 }
 
-.first-post {
+.scroll-container {
+  margin-top: 50px;
+}
+
+.first-post, .second-post, .third-post, .fourth-post, .fifth-post, .sixth-post {
   border: 2px solid cadetblue;
   margin-bottom: 20px;
 }
 
-.second-post {
-  border: 2px solid cadetblue;
-  margin-bottom: 20px;
-}
-
-.third-post {
-  border: 2px solid cadetblue;
+.text-block {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
