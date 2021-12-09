@@ -13,7 +13,12 @@ const App = () => {
           return response.json()
         } throw new Error('Something went wrong');
       })
-      .then(data => console.log(data))
+      .then(data => {
+        const tenFirstTitles = data.slice(0, 10).map(item => `${item.title} (ID: ${item.id})`);
+        
+        setTodo(tenFirstTitles)
+        console.log(tenFirstTitles)
+      })
       .catch(err => {
         console.log(err);
       });
@@ -29,6 +34,8 @@ const App = () => {
   return (
   // Напишите функцию рендера
     <>
+      <h3>Todos:</h3>
+      <div>{Array.isArray(todo) && todo.map((item, index) => <p key={index}>{item}</p>)}</div>
     </>
   )
 }
@@ -65,11 +72,12 @@ const User = () => {
  // Напишите, как должны отображаться эти данные
     <>
       <div className="user-container">
+        <h3>User:</h3>
         <p><strong>Name:</strong> {user.name}</p>
         <p><strong>Username:</strong> {user.username}</p>
         <p><strong>Phone:</strong> {user.phone}</p>
         <p><strong>Website:</strong> {user.website}</p>
-        {/* <p><strong>Company:</strong> {user.company.name}</p> Почему не работает? */} 
+        {/* <p><strong>Company:</strong> {user.company.name}</p> Почему не работает?  */}
       </div>
     </>
  )
