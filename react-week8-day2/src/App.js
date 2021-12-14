@@ -42,7 +42,7 @@ const App = () => {
 
 const User = () => {
   // Выделяем стэйт для данных о пользователе
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState(null)
 
   // Создааем функцию для загрузки данных
   const loadUser = id => {
@@ -71,14 +71,16 @@ const User = () => {
   return (
  // Напишите, как должны отображаться эти данные
     <>
+    {!!user && (
       <div className="user-container">
         <h3>User:</h3>
         <p><strong>Name:</strong> {user.name}</p>
         <p><strong>Username:</strong> {user.username}</p>
         <p><strong>Phone:</strong> {user.phone}</p>
         <p><strong>Website:</strong> {user.website}</p>
-        {/* <p><strong>Company:</strong> {user.company.name}</p> Почему не работает?  */}
+        <p><strong>Company:</strong> {user.company.name}</p>
       </div>
+    )}
     </>
  )
 }
