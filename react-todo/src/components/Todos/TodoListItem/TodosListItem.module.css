@@ -1,0 +1,22 @@
+.todosListItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 4px 0;
+}
+
+.todosListItemTextWrapper {
+  flex-basis: 60%;
+  padding: 0 6px;
+  box-sizing: border-box;
+  align-self: center;
+}
+
+span.todosListItemTextWrapper {
+  padding-left: 14px;
+}
+
+.todosListItemButtonWrapper {
+  flex-basis: 20%;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
