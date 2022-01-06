@@ -1,0 +1,12 @@
+.imagesSearchForm {
+  padding: 16px;
+  margin: 4px;
+  box-sizing: border-box;
+  border: 2px solid #112b82;
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  min-height: 115px;
+  justify-content: space-between;
+}

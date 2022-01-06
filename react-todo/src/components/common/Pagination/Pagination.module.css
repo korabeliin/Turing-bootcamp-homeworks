@@ -1,0 +1,15 @@
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.itemWrapper {
+  padding: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.activeItemWrapper {
+  composes: itemWrapper;
+  font-weight: bold;
+}

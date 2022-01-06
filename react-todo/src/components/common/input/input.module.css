@@ -1,0 +1,51 @@
+.ordinaryInput {
+  border-radius: 6px;
+  height: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px 8px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid black;
+  transition: all 0.25s ease;
+}
+
+.ordinaryInput:focus {
+  box-shadow: 0 0 6px 0 black;
+}
+
+.primaryInput {
+  composes: ordinaryInput;
+  border: 2px solid #112b82;
+  color:#112b82;
+  font-weight: 600;
+}
+
+.primaryInput:focus {
+  box-shadow: 0 0 6px 0 royalblue;
+}
+
+.secondaryInput {
+  composes: ordinaryInput;
+  border: 1px solid grey;
+  background-color: lightgrey;
+}
+
+.errorInput {
+  composes: ordinaryInput;
+  border: 2px solid #ba0000;
+  /* background-color: #ba0000; */
+  font-weight: 600;
+}
+
+.errorInput:focus {
+  box-shadow: 0 0 6px 0 #ba0000;
+}
+
+.errorMessage {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 8px;
+  color: #ba0000;
+  margin: 4px 0;
+}
